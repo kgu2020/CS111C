@@ -1,2 +1,4 @@
 # CS111C
-Course Assignments
+## Course Assignments
+### Lab1
+Recursive methods
