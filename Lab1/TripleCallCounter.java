@@ -4,13 +4,14 @@
 * java version "1.8.0_241", MacOS 10.15.6
 */
 
-/**
-* main()
-* @param args Command line argument.
-* @return void
-* Used to pass a hardcoded parameters to solveTripleCounter().
-*/
+
 class TripleCallCounter{
+  /**
+  * main()
+  * @param args Command line argument.
+  * @return void
+  * Used to pass a hardcoded parameters to solveTripleCounter().
+  */
   public static void main(String[] args) {
     System.out.println(solveTripleCounter(-2)); //Prints the value returned by solveTripleCounter()
   }

@@ -4,13 +4,14 @@
 * java version "1.8.0_241", MacOS 10.15.6
 */
 
-/**
-* main()
-* @param args Commandline argument.
-* @return void
-* Used to pass parameters to towerOfHanoi().
-*/
+
 public class Towers{
+  /**
+  * main()
+  * @param args Commandline argument.
+  * @return void
+  * Used to pass parameters to towerOfHanoi().
+  */
   public static void main(String[] args) {
     towerOfHanoi(6, 'A', 'C', 'B');
   }
@@ -23,7 +24,7 @@ public class Towers{
   */
   public static void towerOfHanoi(int disk, char source, char target, char spare){
     if(disk == 1){
-      System.out.println("Move top disk from "+source+" to "+target); 
+      System.out.println("Move top disk from "+source+" to "+target);
     }
     else{
       towerOfHanoi(disk - 1, source, spare, target); // All disks on spare when finished
