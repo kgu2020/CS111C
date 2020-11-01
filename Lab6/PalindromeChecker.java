@@ -1,3 +1,8 @@
+/*
+* Ken Gu
+* Lab 1
+* java version "1.8.0_241", MacOS 10.15.6
+*/
 import java.util.Scanner;
 public class PalindromeChecker
 {
@@ -5,22 +10,26 @@ public class PalindromeChecker
        @param aString  a string */
    public static boolean isPalindrome(String aString)
    {
-      aString.trim();
-      aString.toLowerCase();
-      for (int i = 0; i < aString.length(); i++)
+      String input = aString;
+      OurStack theStack = new OurStack();
+      input = input.toLowerCase();
+
+      for (int i = 0; i < input.length(); i++)
       {
-        if (!(PalindromeChecker.isPunctuation(aString.charAt(i))))
-          OurStack.push((Character)(aString.charAt(i))); //end if
+        if (!PalindromeChecker.isPunctuation(input.charAt(i)) & !Character.isWhitespace(input.charAt(i)) )
+          theStack.push((Character)(input.charAt(i))); //end if
       } //end for
-      for (int i = 0; i < aString.length(); i++)
+
+      for (int i = 0; i < input.length(); i++)
       {
-        if ((Character)(aString.charAt(i)) == OurStack.peek())
-          OurStack.pop(); //end if
+        if ((Character)(input.charAt(i)) == theStack.peek())
+          theStack.pop();
       } //end for
-      if (OurStack.isEmpty())
-        return true; //end if
+      if (theStack.isEmpty())
+        return true;
       else
-        return false; //end else
+        return false;
+
    } // end isPalindrome
 
 
@@ -32,7 +41,7 @@ public class PalindromeChecker
    public static boolean isPunctuation(char aCharacter)
    {
     return (aCharacter == '.') || (aCharacter == ',') || (aCharacter == '?') ||
-           (aCharacter == '!') || (aCharacter == '"');
+           (aCharacter == '!') || (aCharacter == '"') || (aCharacter == '\'');
    } // end isPunctuation
 
    public static void main(String[] args)
