@@ -1,6 +1,6 @@
 /*
 * Ken Gu
-* Lab 1
+* Lab 6
 * java version "1.8.0_241", MacOS 10.15.6
 */
 import java.util.Scanner;
