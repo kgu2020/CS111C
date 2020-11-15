@@ -20,7 +20,7 @@ public final class LinkedQueue<T> implements QueueInterface<T>
    public void moveToBack(T queueEntry) throws EmptyQueueException
    {
       if (isEmpty())
-        throw new EmptyQueueException;
+        throw new EmptyQueueException("Empty queue.");
       else
       {
         Node currentNode = firstNode;
